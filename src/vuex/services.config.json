@@ -1,0 +1,597 @@
+{
+  "version": "1.0.0",
+  "author": "chensiquan",
+  "services": [
+    {
+      "FC": "200:0",
+      "params": {
+        "content_type": 0,
+        "input_content": "1",
+        "op_entrust_way":	"7",
+        "entrust_safety": 0,
+        "password": "",
+        "exchange_type": "1",
+        "query_direction": "1",
+        "entrust_no": "1",
+        "batch_flag": "0",
+        "account_content": ""
+      },
+      "description": "融资融券认证"
+    },
+    {
+      "FC": "200:1",
+      "params": {
+        "account_content": "",
+        "batch_flag": "0",
+        "content_type": 0,
+        "entrust_no": "1",
+        "entrust_safety": 0,
+        "exchange_type": "1",
+        "input_content": "1",
+        "op_entrust_way": "7",
+        "password": "",
+        "query_direction": "1"
+      },
+      "description": "普通交易认证"
+    },
+    {
+      "FC": "28325:0",
+      "params": {},
+      "description": "信用上限查询"
+    },
+    {
+      "FC": "28572:0",
+      "params": {
+        "crquota_type": "2",
+        "fin_apply_quota": "",
+        "slo_apply_quota": "",
+        "total_apply_quota": 0,
+        "valid_date": "",
+        "remark": "",
+        "momey_type": " "
+      },
+      "description": "客户信用额度调整申请"
+    },
+    {
+      "FC": "705:0",
+      "params": {
+        "money_type": 0
+      },
+      "description": "查询客户负债汇总信息"
+    },
+    {
+      "FC": "28324:0",
+      "params": {},
+      "description": "信用资产查询"
+    },
+    {
+      "FC": "28501:0",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "query_type": 0,
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "未了合约查询"
+    },
+    {
+      "FC": "28501:1",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "query_type": 1,
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "已了合约查询"
+    },
+    {
+      "FC": "28501:2",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "当日合约查询"
+    },
+    {
+      "FC": "28502:0",
+      "params": {},
+      "description": "利率信息查询"
+    },
+    {
+      "FC": "407:0",
+      "params": {},
+      "description": "信用账户-信用股东查询"
+    },
+    {
+      "FC": "407:1",
+      "params": {},
+      "description": "普通账户-股东账户、席位号"
+    },
+    {
+      "FC": "724:0",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "position_str": "",
+        "request_num": 10
+      },
+      "description": "信用额度调整查询"
+    },
+    {
+      "FC": "412:0",
+      "params": {
+        "begin_date": "",
+        "start_date": "",
+        "end_date": ""
+      },
+      "description": "资金流水查询"
+    },
+    {
+      "FC": "728:0",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "position_str": "",
+        "request_num": 10
+      },
+      "description": "负债流水查询"
+    },
+    {
+      "FC": "403:0",
+      "params": {
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "担保品持仓列表"
+    },
+    {
+      "FC": "403:1",
+      "params": {
+        "exchange_type": "",
+        "stock_account": "",
+        "stock_code": "",
+        "entrust_bs": 2,
+        "entrust_prop": 0,
+        "entrust_type": 0
+      },
+      "description": "担保品持仓查询明细"
+    },
+    {
+      "FC": "403:2",
+      "params": {
+        "request_num": 5,
+        "position_str": ""
+      },
+      "description": "担保品持仓列表"
+    },
+    {
+      "FC": "403:3",
+      "params": {
+        "exchange_type": "",
+        "stock_account": "",
+        "stock_code": "",
+        "query_mode": 0
+      },
+      "description": "担保品持仓查询明细"
+    },
+    {
+      "FC": "711:0",
+      "params": {
+        "exchange_type": "",
+        "stock_account": "",
+        "stock_code": "",
+        "occur_amount": "",
+        "valid_date": "",
+        "remark":""
+      },
+      "description": "担保证券冻结"
+    },
+    {
+      "FC": "712:0",
+      "params": {
+        "stock_code": "",
+        "stock_name": "",
+        "gh_type": 1,
+        "occur_amount": 0,
+        "stock_account": "",
+        "seat_no": "",
+        "exchange_type": "",
+        "branch_no_comm": "",
+        "fund_account_comm": "",
+        "client_id_comm": "",
+        "stock_account_comm": "",
+        "seat_no_comm": "",
+        "branch_no_crdt": "",
+        "fund_account_crdt": "",
+        "stock_account_crdt": "",
+        "seat_no_crdt": "",
+        "client_id_crdt": ""
+      },
+      "description": "担保证券提交"
+    },
+    {
+      "FC": "712:1",
+      "params": {
+        "stock_code": "",
+        "stock_name": "",
+        "gh_type": 2,
+        "occur_amount": 0,
+        "stock_account": "",
+        "seat_no": "",
+        "exchange_type": "",
+        "branch_no_comm": "",
+        "fund_account_comm": "",
+        "client_id_comm": "",
+        "stock_account_comm": "",
+        "seat_no_comm": "",
+        "branch_no_crdt": "",
+        "fund_account_crdt": "",
+        "stock_account_crdt": "",
+        "seat_no_crdt": "",
+        "client_id_crdt": ""
+      },
+      "description": "担保证券返回"
+    },
+    {
+      "FC": "701:0",
+      "params": {
+        "exchange_type": "",
+        "stock_account": "",
+        "stock_code": "",
+        "entrust_prop": 0
+      },
+      "description": "融券委托代码"
+    },
+    {
+      "FC": "713:0",
+      "params": {
+        "action_in": 1
+      },
+      "description": "担保物撤单"
+    },
+    {
+      "FC": "304:0",
+      "params": {
+        "entrust_no": "",
+        "exchange_type": ""
+      },
+      "description": "委托撤单"
+    },
+    {
+      "FC": "304:1",
+      "params": {
+        "entrust_no": "",
+        "exchange_type": ""
+      },
+      "description": "担保物-委托撤单"
+    },
+    {
+      "FC": "713:1",
+      "params": {
+        "request_num": 2000,
+        "start_date":"20161223",
+        "end_date":"20161223",
+        "begin_date":"20161223"
+      },
+      "description": "非交易过户查询"
+    },
+    {
+      "FC": "715:0",
+      "params": {
+        "stock_code":"",
+        "position_str": "",
+        "request_num": 20
+      },
+      "description": "可融资证券查询"
+    },
+    {
+      "FC": "720:0",
+      "params": {
+        "begin_date": "",
+        "end_date": "",
+        "position_str": "",
+        "compact_type": 0,
+        "request_num": 10
+      },
+      "description": "融资负债订单明细"
+    },
+    {
+      "FC": "716:0",
+      "params": {
+        "query_mode": 0,
+        "position_str": "",
+        "request_num": 10
+      },
+      "description": "可融券证券查询"
+    },
+    {
+      "FC": "716:1",
+      "params": {
+        "request_num": 5,
+        "position_str": "",
+        "query_mode": 1
+      },
+      "description": "融券卖出-融券证券查询"
+    },
+    {
+      "FC": "716:2",
+      "params": {
+        "stock_code": "",
+        "request_num": 1,
+        "query_mode": 1
+      },
+      "description": "融券卖出-融券证券查询"
+    },
+    {
+      "FC": "706:0",
+      "params": {
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "融券负债订单明细"
+    },
+    {
+      "FC": "706:1",
+      "params": {
+        "exchange_type": "",
+        "stock_account": "",
+        "stock_code": ""
+      },
+      "description": "某支股票-融券负债订单明细"
+    },
+    {
+      "FC": "401:0",
+      "params": {
+        "action_in": 1,
+        "position_str": "",
+        "request_num": 10
+      },
+      "description": "获取客户所有证券委托信息-委托撤单"
+    },
+    {
+      "FC": "704:0",
+      "params": {
+        "stock_account": "",
+        "entrust_bs": 2,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_type": 7,
+        "entrust_amount": "",
+        "entrust_prop": "0"
+      },
+      "description": "融资融券委托确认"
+    },
+    {
+      "FC": "704:1",
+      "params": {
+        "stock_account": "",
+        "entrust_bs": 1,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_type": 7,
+        "entrust_amount": "",
+        "entrust_prop": "0"
+      },
+      "description": "卖券还券委托确认"
+    },
+    {
+      "FC": "704:2",
+      "params": {
+        "stock_account": "",
+        "entrust_bs": 1,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_type": 6,
+        "entrust_amount": "",
+        "entrust_prop": "0"
+      },
+      "description": "融资买入委托确认"
+    },
+    {
+      "FC": "704:3",
+      "params": {
+        "stock_account": "",
+        "entrust_bs": 2,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_type": 6,
+        "entrust_amount": "",
+        "entrust_prop": "0"
+      },
+      "description": "卖券还款"
+    },
+    {
+      "FC": "722:0",
+      "params": {
+        "position_str": "",
+        "request_num": 10
+      },
+      "description": "融券负债查询"
+    },
+    {
+      "FC": "702:0",
+      "params": {
+        "stock_account": "",
+        "stock_code": "",
+        "entrust_price": "",
+        "entrust_bs": 1,
+        "entrust_type": 7,
+        "entrust_prop": 0,
+        "exchange_type": ""
+      },
+      "description": "融券取可买数量"
+    },
+    {
+      "FC": "702:1",
+      "params": {
+        "stock_account": "",
+        "stock_code": "",
+        "entrust_price": "",
+        "entrust_bs": 1,
+        "entrust_type": 6,
+        "entrust_prop": 0,
+        "exchange_type": ""
+      },
+      "description": "融资取可买数量"
+    },
+    {
+      "FC": "708:0",
+      "params": {
+        "stock_account": "",
+        "gh_type": 5,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "occur_amount": "",
+        "entrust_prop": 0
+      },
+      "description": "直接还款"
+    },
+    {
+      "FC": "301:0",
+      "params": {
+         "entrust_bs": 1,
+         "stock_code": "",
+         "entrust_price": "",
+         "entrust_prop": 0,
+         "exchange_type": ""
+      },
+      "description": "大约可买获取"
+    },
+    {
+      "FC": "302:0",
+      "params": {
+        "entrust_bs": 1,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_amount": "",
+        "entrust_prop": 0
+      },
+      "description": "普通委托 - 买入"
+    },
+    {
+      "FC": "302:1",
+      "params": {
+        "entrust_bs": 2,
+        "stock_code": "",
+        "stock_name": "",
+        "exchange_type": "",
+        "entrust_price": "",
+        "entrust_amount": "",
+        "entrust_prop": 0
+      },
+      "description": "普通委托 - 卖出"
+    },
+    {
+      "FC": "700:0",
+      "params": {
+        "stock_account": "",
+        "stock_code": "",
+        "exchange_type": "",
+        "entrust_prop": 0
+      },
+      "description": "融资委托代码 - 查询可卖数量"
+    },
+    {
+      "FC": "736:0",
+      "params": {
+        "money_type": 0,
+        "stock_account": "",
+        "entrust_bs": 2,
+        "pay_type": 0,
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "现金还款 - 查询未指定偿还负债订单明细"
+    },
+    {
+      "FC": "707:0",
+      "params": {
+        "occur_balance": "",
+        "money_type": 0,
+        "serial_no": ""
+      },
+      "description": "现金还款 - 直接还款"
+    },
+    {
+      "FC": "729:0",
+      "params": {
+        "money_type": 0,
+        "exchange_type": 2
+      },
+      "description": "取客户融资融券年利率"
+    },
+    {
+      "FC": "735:0",
+      "params": {
+        "exchange_type": 1,
+        "stock_account": "",
+        "stock_code": "",
+        "entrust_amount": "",
+        "postpone_flag": 0,
+        "entrust_price": "",
+        "entrust_bs": 2,
+        "entrust_prop": 0,
+        "bank_no": 0,
+        "warrant_type": 0,
+        "regflag": 1,
+        "risk_flag": 1
+      },
+      "description": "融资融券指定委托确认 -  未使用"
+    },
+    {
+      "FC": "736:1",
+      "params": {
+        "money_type": 0,
+        "stock_account": "",
+        "entrust_bs": 2,
+        "pay_type": 0,
+        "request_num": 10,
+        "position_str": ""
+      },
+      "description": "卖券还款 - 查询某支股票未指定偿还负债订单明细"
+    },
+    {
+      "FC": "105:0",
+      "params": {
+        "stock_code": ""
+      },
+      "description": "证券代码信息查询"
+    },
+    {
+      "FC": "300:0",
+      "params": {
+        "stock_code": ""
+      },
+      "description": "代码输入确认"
+    },
+    {
+      "FC": "703:0",
+      "params": {
+        "stock_code": "",
+        "exchange_type": "",
+        "stock_account": "",
+        "entrust_price": "",
+        "entrust_type": 7,
+        "entrust_prop": 0,
+        "entrust_bs": 2
+      },
+      "description": "取融券可卖数量"
+    }
+  ]
+}

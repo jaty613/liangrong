@@ -1,0 +1,226 @@
+/*键盘*/
+.keyword_table table{
+    padding: 7px;
+}
+.keyword_table {
+    background: #cdcfd3;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10000
+}
+
+.keyword_table table {
+    padding: 7px 7px 2px;
+    table-layout: fixed;
+    border-collapse:inherit;
+}
+
+.keyword_table table td a {
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    background: #ffffff;
+    box-shadow: 0px 1px 1px #7a7c7e;
+    text-decoration: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+.keyword_table table td:last-child a{
+    margin-right: 0;
+}
+.keyword_table table td a.active {
+    background: #FFA98D;
+    color: #FFF
+}
+
+.keyword_table .random td a {
+    height: 80px;
+    line-height: 80px
+}
+
+.keyword_table .random td a.keyword_btn, .keyword_table .random td a.del {
+    background: #CCC;
+    color: #666
+}
+
+.keyword_table .random td a.del svg {
+    height: 42px;
+    width: 42px;
+    margin: 20px auto 0
+}
+
+.keyword_table .random td a.del.active {
+    background: #E7493B;
+    color: #FFF
+}
+
+.keyword_table .random td a.del.active svg path, .keyword_table .random td a.del.active svg polygon {
+    fill: currentColor
+}
+
+.keyword_table .random td a.keyword_btn {
+    font-size: 24px
+}
+
+.keyword_table .random td a.keyword_btn.active {
+    background: #FFA98D;
+    color: #FFF
+}
+
+.keyword_table .stock td a {
+    height: 45px;
+    line-height: 45px
+}
+
+.keyword_table .stock td.pre a {
+    height: 35px;
+    line-height: 35px;
+    font-size: 18px
+}
+
+.keyword_table .stock td a.keyword_btn, .keyword_table .stock td a.del {
+    background: #bbbdc1;
+    color: #333
+}
+
+.keyword_table .stock td a.del svg {
+    width: 30px;
+    height: 30px;
+    margin: 7px auto 0
+}
+
+.keyword_table .stock td a.del.active {
+    background: #FFA98D;
+    color: #FFF
+}
+.keyword_table .stock td a:active {
+    background: #89898b;
+    color: #FFF
+}
+
+.keyword_table .stock td a.del.active svg path, .keyword_table .stock td a.del.active svg polygon {
+    fill: currentColor
+}
+
+.keyword_table .stock td a.keyword_btn {
+    font-size: 18px
+}
+
+.keyword_table .stock td a.keyword_btn.active {
+    background: #FFA98D;
+    color: #FFF
+}
+
+.keyword_table .abc td a {
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px
+}
+
+.keyword_table .abc td a.active {
+    color: #FFF;
+    position: relative
+}
+
+.keyword_table .abc td a.key.active {
+    border: 1px solid #FFF;
+    background: #FFA98D
+}
+
+.keyword_table .abc td a.key.active:before {
+    content: attr(key);
+    width: 200%;
+    height: 70px;
+    border: 1px solid #FFF;
+    position: absolute;
+    left: -50%;
+    top: -70px;
+    background: #CCC;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: -moz-linear-gradient(0 0 270deg, #8D3837, #FFA98D);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#8D3837), to(#FFA98D));
+    font-size: 36px
+}
+
+.keyword_table .abc td a.key.active:after {
+    content: attr(key);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #FFA98D
+}
+
+.keyword_table .abc td a.keyword_btn, .keyword_table .abc td a.caps, .keyword_table .abc td a.del {
+    background: #bbbdc1;
+    font-size: 16px;
+    color: #333
+}
+
+.keyword_table .abc td a.keyword_btn.active, .keyword_table .abc td a.caps.active, .keyword_table .abc td a.del.active {
+    background: #FFA98D;
+    color: #FFF
+}
+
+.keyword_table .abc td a.caps svg {
+    width: 16px;
+    height: 16px;
+    margin: 13px auto 0
+}
+
+.keyword_table .abc td a.del svg {
+    width: 30px;
+    height: 30px;
+    margin: 8px auto 0
+}
+
+.keyword_table .abc td a.del.active svg path, .keyword_table .abc td a.del.active svg polygon {
+    fill: currentColor
+}
+
+.keyword_table .abc td a.enter {
+    font-size: 20px
+}
+
+.keyword_table .number td a {
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px
+}
+
+.keyword_table .number td a.keyword_btn {
+    background: #666;
+    font-size: 20px
+}
+
+.keyword_table .number td a.keyword_btn, .keyword_table .number td a.del {
+    background: #CCC;
+    color: #666;
+    font-size: 20px
+}
+
+.keyword_table .number td a.keyword_btn.active, .keyword_table .number td a.del.active {
+    background: #FFA98D;
+    color: #FFF
+}
+
+.keyword_table .number td a.del svg {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto 0
+}
+
+.keyword_table .number td a.del.active svg path, .keyword_table .number td a.del.active svg polygon {
+    fill: currentColor
+}

@@ -1,0 +1,20 @@
+[
+  {
+      "server": "http://192.168.78.244:8080/xnzq-agent/capital",
+      "id": 4,
+      "name": "trade_credit_default",
+      "description": "融资融券"
+  },
+  {
+      "server": "http://192.168.78.244:8080/xnzq-agent/secu",
+      "id": 1,
+      "name": "trade_secu_default",
+      "description": "股票普通交易"
+  },
+  {
+      "server": "http://192.168.78.244:8080/xnzq_webapp",
+      "id": 0,
+      "name": "stock_quote",
+      "description": "行情服务器"
+  }
+]

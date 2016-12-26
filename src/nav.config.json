@@ -1,0 +1,153 @@
+[
+  {
+    "title": "融资融券",
+    "list": [
+      {
+        "path": "/home",
+        "name": "融资融券"
+      }
+    ]
+  },
+  {
+    "title": "普通交易",
+    "list": [
+      {
+        "path": "/transaction/purchase",
+        "name": "普通买入"
+      },
+      {
+        "path": "/transaction/sold",
+        "name": "普通卖出"
+      },
+      {
+        "path": "/transaction/entrust",
+        "name": "委托撤单"
+      }
+    ]
+  },
+  {
+    "title": "融资",
+    "list": [
+      {
+        "path": "/financing/buyouts",
+        "name": "融资买入"
+      },
+      {
+        "path": "/financing/ticket-payments",
+        "name": "卖券还款"
+      },
+      {
+        "path": "/financing/cash-payments",
+        "name": "现金还款"
+      },
+      {
+        "path": "/financing/financeable-securities",
+        "name": "可融资证券查询"
+      },
+      {
+        "path": "/financing/financing-liabilities-orders",
+        "name": "融资负债订单明细"
+      }
+    ]
+  },
+  {
+    "title": "融券",
+    "list": [
+      {
+        "path": "/trading/margin-trading",
+        "name": "融券卖出"
+      },
+      {
+        "path": "/trading/buy-voucher-still-voucher",
+        "name": "买券还券"
+      },
+      {
+        "path": "/trading/cash-voucher-still-voucher",
+        "name": "现券还券"
+      },
+      {
+        "path": "/trading/available-borrowing",
+        "name": "可融券证券查询"
+      },
+      {
+        "path": "/trading/margin-liabilities-orders",
+        "name": "融券负债订单明细"
+      }
+    ]
+  },
+  {
+    "title": "担保品",
+    "list": [
+      {
+        "path": "/collateral/collateral-submit",
+        "name": "担保品提交"
+      },
+      {
+        "path": "/collateral/collateral-back",
+        "name": "担保品返回"
+      },
+      {
+        "path": "/collateral/collateral-revoke",
+        "name": "担保物撤单"
+      },
+      {
+        "path": "/collateral/non-transactional-transfer",
+        "name": "非交易过户查询"
+      }
+    ]
+  },
+  {
+    "title": "综合查询",
+    "list": [
+      {
+        "path": "/integrated/credit-assets",
+        "name": "信用资产查询"
+      },
+      {
+        "path": "/integrated/outstanding-contracts",
+        "name": "未了合约查询"
+      },
+      {
+        "path": "/integrated/already-contracts",
+        "name": "已了合约查询"
+      },
+      {
+        "path": "/integrated/cash-pre-payment",
+        "name": "现金预还款查询"
+      },
+      {
+        "path": "/integrated/single-day-contract",
+        "name": "当日合约查询"
+      },
+      {
+        "path": "/integrated/interest-rate-information",
+        "name": "利率信息查询"
+      },
+      {
+        "path": "/integrated/credit-shareholders",
+        "name": "信用股东查询"
+      },
+      {
+        "path": "/integrated/credit-limit-adjustment",
+        "name": "信用额度调整查询"
+      },
+      {
+        "path": "/integrated/capital-flow",
+        "name": "资金流水查询"
+      },
+      {
+        "path": "/integrated/debt-flow",
+        "name": "负债流水查询"
+      }
+    ]
+  },
+  {
+    "title": "额度调整",
+    "list": [
+      {
+        "path": "/limit/credit-limit-adjustment",
+        "name": "信用额度调整申请"
+      }
+    ]
+  }
+]
