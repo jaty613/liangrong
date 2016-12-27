@@ -4,7 +4,7 @@ import VueValidator from 'vue-validator'
 import routes from 'src/login-route.js'
 import MintUI from 'mint-ui'
 import App from './login.vue'
-//  import 'vconsole'
+// import 'vconsole'
 
 //  Vue Config
 Vue.config.devtools = true

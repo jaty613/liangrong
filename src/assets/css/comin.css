@@ -1887,7 +1887,7 @@ select {
   padding-top: 0px;
   margin-bottom: 0px;
   padding-bottom: 0px;
-  width: 100%;
+  width: 85%;
   background-color: transparent;
   background: none;
   display: block;
@@ -2354,7 +2354,7 @@ select {
   margin-bottom: 0px;
   padding-bottom: 0px;
   text-align: left;
-  width: 100%;
+  width: 85%;
   background-color: transparent;
   background: none;
   border-radius: 0;
@@ -2416,12 +2416,12 @@ select {
 .am-search-input .text-input {
   position: absolute;
   display: block;
-  width: 1000px;
+  width: 88%;
   height: 24px;
   line-height: 24px;
   -webkit-box-sizing: border-box;
   font-size: 14px;
-  left: 30px;
+  left: 10px;
   top: 50%;
   margin-top: -12px;
   border: 0px none;

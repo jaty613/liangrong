@@ -5,7 +5,7 @@ import routes from 'src/nav-route.js'
 import MintUI from 'mint-ui'
 import infiniteScroll from 'vue-infinite-scroll'
 import App from './H5.vue'
-//  import 'vconsole'
+// import 'vconsole'
 
 //  Vue Config
 Vue.config.devtools = true
