@@ -54,13 +54,10 @@
 <script type='text/babel'>
   import {$P} from 'vuexx/action/data-action'
   import {$AS, $RELOAD} from 'vuexx/action/ui-action'
+  import {VAA001} from 'vuexx/action/vaild-action'
   export default {
     ready () {
       this.wrapper.height = document.documentElement.clientHeight - this.$els.wrapper.getBoundingClientRect().top
-      //      this.P4120.begin_date = new Date(this.begin_date).Format('yyyyMMdd')
-      //      this.P4120.start_date = new Date(this.begin_date).Format('yyyyMMdd')
-      //      this.P4120.end_date = new Date(this.end_date).Format('yyyyMMdd')
-      //      this.AS4120()
     },
     data () {
       return {
@@ -98,12 +95,16 @@
         this.begin_date = value.Format('yyyy-MM-dd')
         this.P4120.start_date = new Date(this.begin_date).Format('yyyyMMdd')
         this.P4120.begin_date = new Date(this.begin_date).Format('yyyyMMdd')
-        this.search()
+        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+          this.search()
+        }
       },
       handleEndChange (value) {
         this.end_date = value.Format('yyyy-MM-dd')
         this.P4120.end_date = new Date(this.end_date).Format('yyyyMMdd')
-        this.search()
+        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+          this.search()
+        }
       }
     }
   }

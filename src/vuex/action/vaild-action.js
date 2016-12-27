@@ -563,3 +563,22 @@ export const VA285720 = (data) => {
   let template = '信用额度调整,确定要申请吗?'
   return template
 }
+
+// 验证开始时间必须小于结束时间
+export const VAA001 = (data) => {
+  if (data) {
+    if (!data.begin_date) {
+      Toast({message: '开始时间不能为空', duration: 1000})
+      return false
+    }
+    if (!data.end_date) {
+      Toast({message: '结束不能为空', duration: 1000})
+      return false
+    }
+    if (new Date(data.begin_date).getTime() > new Date(data.end_date).getTime()) {
+      Toast({message: '开始时间不能大于结束时间', duration: 1000})
+      return false
+    }
+    return true
+  }
+}

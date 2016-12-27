@@ -56,6 +56,7 @@
 <script type='text/babel'>
   import {$P} from 'vuexx/action/data-action'
   import {$AS, $RELOAD} from 'vuexx/action/ui-action'
+  import {VAA001} from 'vuexx/action/vaild-action'
   export default {
     created () {
       // 监听列表内容是否发生变化
@@ -117,12 +118,16 @@
       handleStartChange (value) {
         this.begin_date = value.Format('yyyy-MM-dd')
         this.queryParams.begin_date = new Date(this.begin_date).Format('yyyyMMdd')
-        this.search()
+        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+          this.search()
+        }
       },
       handleEndChange (value) {
         this.end_date = value.Format('yyyy-MM-dd')
         this.queryParams.end_date = new Date(this.end_date).Format('yyyyMMdd')
-        this.search()
+        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+          this.search()
+        }
       }
     }
   }
