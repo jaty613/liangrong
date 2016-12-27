@@ -36,8 +36,8 @@
             <p class="am-ft-smm am-ft-lightgray">{{item.business_name}}</p>
           </div>
           <div class="" style="width:66px;">
-            <p class="">{{Math.transCNScientific(parseFloat(item.business_price))}}</p>
-            <p class="am-ft-sm">{{Math.transCNScientific(parseInt(item.occur_amount))}}</p>
+            <p class="">{{item.business_price ? Math.transCNScientific(parseFloat(item.business_price)) : 0}}</p>
+            <p class="am-ft-sm">{{item.occur_amount ? Math.transCNScientific(parseInt(item.occur_amount)) : 0}}</p>
           </div>
           <div class="am-flexbox-item {{ item.occur_balance > 0 ? 'am-ft-red' : 'am-ft-green'}} ">{{item.occur_balance}}</div>
         </li>

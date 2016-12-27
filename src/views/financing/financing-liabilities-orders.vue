@@ -24,7 +24,7 @@
             <p class="am-ft-11 am-ft-smm">{{item.stock_code}}</p>
           </div>
           <div class="am-flexbox-item text-center">
-            <p class="am-ft-15 am-ft-sm {{item.debit_balance > 0 ? 'am-ft-red' : 'am-ft-green'}}">{{Math.transCNScientific(parseFloat(item.debit_balance))}}</p>
+            <p class="am-ft-15 am-ft-sm">{{Math.transCNScientific(parseFloat(item.debit_balance))}}</p>
             <p class="am-ft-15 am-ft-smm">{{Math.transCNScientific(parseFloat(item.debit_interest))}}</p>
           </div>
           <div class="am-flexbox-item">

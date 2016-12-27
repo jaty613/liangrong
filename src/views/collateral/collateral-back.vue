@@ -180,6 +180,7 @@
           // 重置内容
           this.P7121['exchange_type'] = ''
           this.P7121['stock_name'] = ''
+          this.P7121['occur_amount'] = ''
         }
       })
 

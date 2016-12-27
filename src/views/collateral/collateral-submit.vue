@@ -176,6 +176,7 @@
           // 重置内容
           this.P7120['exchange_type'] = ''
           this.P7120['stock_name'] = ''
+          this.P7120['occur_amount'] = ''
         }
       })
       // 监听列表内容是否发生变化

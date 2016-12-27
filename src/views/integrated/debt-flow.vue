@@ -85,6 +85,9 @@
     },
     route: {
       data: function (transition) {
+        this.queryParams.begin_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyyMMdd'))
+        this.queryParams.end_date = this.queryParams.end_date ? this.queryParams.end_date : ((new Date()).Format('yyyyMMdd'))
+
         this.RL7280()
         this.reload = true
       }

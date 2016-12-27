@@ -310,6 +310,7 @@ ActionStore['712:0:submit'] = ({dispatch}, vm) => {
               if (msg) Toast({message: msg.message, duration: 1000})
               else {
                 Toast({message: `委托成功! 委托编号: ${$G('712:0').entrust_no}`, duration: 1000})
+                $P('712:0')['stock_code'] = ''
                 $Visual(dispatch, '403:2:0:1', 'RELOAD')
               }
             })
@@ -475,6 +476,7 @@ ActionStore['712:1:SUBMIT'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('712:1').entrust_no}`, duration: 1000})
+            $P('712:1')['stock_code'] = ''
             $Visual(dispatch, '403:0:0:4', 'RELOAD')
           }
         })
@@ -716,6 +718,8 @@ ActionStore['707:0'] = ({dispatch}, vm) => {
             Toast({message: msg.message, duration: 1000})
           } else {
             Toast({message: '委托成功!', duration: 1000})
+            $P('707:0')['serial_no'] = ''
+            $P('707:0')['occur_balance'] = ''
             $Visual(dispatch, '705:0:1:4')
             $Visual(dispatch, '736:0:0:4')
           }
@@ -737,6 +741,7 @@ ActionStore['302:0'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('302:0').batch_no}`, duration: 1000})
+            $P('302:0')['stock_code'] = ''
             $Visual(dispatch, '403:0:0:4', 'RELOAD')
           }
         })
@@ -757,8 +762,9 @@ ActionStore['302:1'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('302:1').batch_no}`, duration: 1000})
+            $P('302:1')['stock_code'] = ''
             $Visual(dispatch, '403:0:0:4', 'RELOAD')
-            $Visual(dispatch, '300:0:1:4')
+            // $Visual(dispatch, '300:0:1:4')
           }
         })
       }
@@ -809,6 +815,10 @@ ActionStore['300:0'] = ({dispatch}, vm) => {
     Indicator.close()
     if (msg) Toast({message: msg.message, duration: 1000})
   })
+}
+// 重置证券代码确认
+ActionStore['300:0:RESET'] = ({dispatch}, vm) => {
+  $Visual(dispatch, '300:0:1:4', 'RESET')
 }
 
 // 取融券可卖数量

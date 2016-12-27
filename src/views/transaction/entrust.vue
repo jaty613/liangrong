@@ -14,10 +14,10 @@
             </div>
             <div class="am-flexbox-item">
               <p class="am-ft-15 am-ft-sm">{{item.entrust_price}}</p>
-              <p class="am-ft-15 am-ft-smm">{{item.entrust_amount}}</p>
+              <p class="am-ft-15 am-ft-smm">{{parseInt(item.entrust_amount)}}</p>
             </div>
             <div class="am-flexbox-item">
-              <p class="am-ft-11 am-ft-sm">{{item.business_amount}}</p>
+              <p class="am-ft-11 am-ft-sm">{{Math.transCNScientific(parseInt(item.business_amount))}}</p>
               <p class="am-ft-15 am-ft-smm {{item.entrust_bs === '1' ? 'am-ft-red' : 'am-ft-green'}}">{{$dic('entrust_bs',item.entrust_bs)}}</p>
             </div>
           </li>
