@@ -81,22 +81,6 @@
     },
     ready: function () {
       window.history.forward(1)
-      window.addEventListener('resize', function () {
-        // 得到屏幕尺寸 (内部/外部宽度，内部/外部高度)
-        changeLogoPosition()
-      }, false)
-
-      // changeLogoPosition();
-
-      function changeLogoPosition () {
-        var contentHeight = document.getElementById('content_div').clientHeight
-        contentHeight = parseInt(contentHeight)
-        if (document.body.scrollHeight - contentHeight > 0) {
-          document.getElementById('content_div').style.marginTop = '-180px'
-        } else {
-          document.getElementById('content_div').style.marginTop = '0px'
-        }
-      }
     },
     methods: {
     }

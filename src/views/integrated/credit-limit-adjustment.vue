@@ -66,7 +66,7 @@
 </template>
 <style scoped>
   .page-infinite-wrapper {
-    position: absolute;
+    position: fixed;
     top: 105px
   }
 </style>

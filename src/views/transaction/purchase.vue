@@ -1,6 +1,6 @@
 <template>
   <section class="pd-bottom46">
-    <section class="am-flexbox pd15 am-pt-10 border-top border-bottom am-pb-5 header-top am-bg-l" style="z-index:999;">
+    <section class="am-flexbox pd15 am-pt-10 border-top border-bottom am-pb-5 header-top am-bg-l">
       <div class="am-flexbox-item am-right-10">
         <div class="con-code">
           <div class="ui-formContainer btn-border">
@@ -202,7 +202,7 @@
 </template>
 <style scoped>
   .page-infinite-wrapper {
-    position: absolute;
+    position: fixed;
     top: 353px
   }
 </style>

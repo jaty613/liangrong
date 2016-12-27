@@ -2438,7 +2438,7 @@ select {
   right: 10px;
   bottom: 6px;
   background: url("../images/icon-close.png") no-repeat scroll 0% 0% / 18px auto transparent;
-  z-index: 10002;
+  z-index: 1000;
 }
 .add-stock{
   background: url("../images/add.png") no-repeat;
