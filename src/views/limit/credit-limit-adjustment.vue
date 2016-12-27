@@ -51,7 +51,7 @@
                 date-format="{value} 日">
               </mt-datetime-picker>
                     <span class="ui-form-field">
-                        <input v-on:focus="this.pickerVisible=true" v-model="params.valid_date" type="text" value="{{((new Date()).Format('yyyy-MM-dd'))}}" class="text_input " value="" placeholder="有效日期" style="font-size:12px;">
+                        <input v-on:focus="this.pickerVisible=true" readonly v-model="params.valid_date" type="text" value="{{((new Date()).Format('yyyy-MM-dd'))}}" class="text_input " value="" placeholder="有效日期" style="font-size:12px;">
                     </span>
           </div>
         </div>
