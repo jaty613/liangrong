@@ -7,35 +7,35 @@
         </select>
         <div class="am-flexbox ui-formContainer am-flexbox-remind firmb-flexbox-buy am-mt-10 btn-border am-bg-white">
           <div class=" borderNo am-flexbox-item">
-                    <span class="ui-form-field">
-                        <input name="" type="text" readonly= "true" class="text_input " value="" placeholder="人民币" style="font-size:12px;">
-                    </span>
+            <span class="ui-form-field">
+                <input name="" type="text" readonly= "true" class="text_input " value="" placeholder="人民币" style="font-size:12px;">
+            </span>
           </div>
         </div>
         <div class="am-flexbox ui-formContainer am-flexbox-remind firmb-flexbox-buy am-mt-10 btn-border am-bg-white">
           <div class="am-right-10 am-ft-lightgray am-ft-smmm border-right am-relative am-left-10">融资额度</div>
           <div class=" borderNo am-flexbox-item">
-                    <span class="ui-form-field">
-                      <input  v-model.number="params.fin_apply_quota" debounce="100" type="number"  class="text_input am-ft-smm am-ft-gray" placeholder="输入融资额度" style="font-size:12px;">
-                      <a v-show="params.fin_apply_quota" @click="params.fin_apply_quota=''" class="close-ico bottom-3"></a>
-                    </span>
+            <span class="ui-form-field">
+              <input  v-model.number="params.fin_apply_quota" debounce="100" type="number"  class="text_input am-ft-smm am-ft-gray" placeholder="输入融资额度" style="font-size:12px;">
+              <a v-show="params.fin_apply_quota" @click="params.fin_apply_quota=''" class="close-ico bottom-3"></a>
+            </span>
           </div>
         </div>
         <div class="am-flexbox ui-formContainer am-flexbox-remind firmb-flexbox-buy am-mt-10 btn-border am-bg-white">
           <div class="am-right-10 am-ft-lightgray am-ft-smmm border-right am-relative am-left-10">融券额度</div>
           <div class=" borderNo am-flexbox-item">
-                    <span class="ui-form-field">
-                        <input v-model.number="params.slo_apply_quota" type="number" class="text_input am-ft-smm am-ft-gray" placeholder="输入融券额度" style="font-size:12px;">
-                        <a v-show="params.slo_apply_quota" @click="params.slo_apply_quota=''" class="close-ico bottom-3"></a>
-                    </span>
+            <span class="ui-form-field">
+                <input v-model.number="params.slo_apply_quota" type="number" class="text_input am-ft-smm am-ft-gray" placeholder="输入融券额度" style="font-size:12px;">
+                <a v-show="params.slo_apply_quota" @click="params.slo_apply_quota=''" class="close-ico bottom-3"></a>
+            </span>
           </div>
         </div>
         <div class="am-flexbox ui-formContainer am-flexbox-remind firmb-flexbox-buy am-mt-10 btn-border am-bg-white">
           <div class="am-right-10 am-ft-lightgray am-ft-smmm border-right am-relative am-left-10">申请总额</div>
           <div class=" borderNo am-flexbox-item">
-                    <span class="ui-form-field">
-                        <input v-model="params.total_apply_quota"  debounce="100"type="number" readonly="true" class="text_input " style="font-size:12px;">
-                    </span>
+            <span class="ui-form-field">
+                <input v-model="params.total_apply_quota"  debounce="100"type="number" readonly="true" class="text_input " style="font-size:12px;">
+            </span>
           </div>
         </div>
         <div class="am-flexbox ui-formContainer am-flexbox-remind firmb-flexbox-buy am-mt-10 btn-border am-bg-white">
@@ -50,9 +50,9 @@
                 month-format="{value} 月"
                 date-format="{value} 日">
               </mt-datetime-picker>
-                    <span class="ui-form-field">
-                        <input v-on:focus="this.pickerVisible=true" v-model="params.valid_date" type="text" value="{{((new Date()).Format('yyyy-MM-dd'))}}" class="text_input " value="" placeholder="有效日期" style="font-size:12px;">
-                    </span>
+              <span class="ui-form-field">
+                  <span v-on:click="this.pickerVisible=true" class="text_input "style="font-size:12px;">{{ params.valid_date ? params.valid_date : ((new Date()).Format('yyyy-MM-dd'))}}</span>
+              </span>
           </div>
         </div>
         <div class="am-flexbox am-mt-10 am-bg-white">
