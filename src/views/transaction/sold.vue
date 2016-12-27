@@ -263,13 +263,13 @@
           this.P3021['entrust_price'] = ''
           this.P3021['entrust_amount'] = ''
           // 重置要查询可买数量的股票代码
-          // this.P3010['stock_code'] = ''
+          this.P3000['stock_code'] = ''
         }
       })
       // 监听根据股票代码查询 - 可卖数量
       this.$watch('P3000.stock_code', function (val, oldVal) {
         if (val === '') {
-          // this.AS3010RESET()
+          this.AS3000RESET()
         } else {
           this.AS3000()
         }
@@ -320,6 +320,7 @@
         AS4030: $AS('403:0'),
         RL4030: $RELOAD('403:0:0:4'),
         AS3000: $AS('300:0'),
+        AS3000RESET: $AS('300:0:RESET'),
         AS3021: $AS('302:1'),
         AS4070: $AS('407:0')
       }

@@ -38,7 +38,7 @@
           </div>
           <div class="am-flexbox-item">
             <p class="am-ft-15 am-ft-sm">{{item.entrust_no}}</p>
-            <p class="am-ft-15 am-ft-sm">{{item.curr_time}}</p>
+            <p class="am-ft-15 am-ft-sm">{{item.curr_time ? `${item.curr_time.substr(0, 2) + ':' + item.curr_time.substr(2, 2) + ':' + item.curr_time.substr(4, 2)}` : ''}}</p>
           </div>
         </li>
       </ul>
