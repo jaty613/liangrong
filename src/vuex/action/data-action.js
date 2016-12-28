@@ -72,6 +72,7 @@ export const $Macro = (code, number) => {
         }
         obj.stock_code = obj.stockCode
         obj.stock_name = obj.stockName
+        obj.code_type = `0x${parseInt(obj.codeType, 10).toString(16)}`
         delete obj.codeType
         delete obj.stockCode
         delete obj.stockName
