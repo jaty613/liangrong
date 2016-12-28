@@ -92,9 +92,9 @@
         var contentHeight = document.getElementById('content_div').clientHeight
         contentHeight = parseInt(contentHeight)
         if (document.body.scrollHeight - contentHeight <= 0) {
-          document.getElementById('content_div').style.marginTop = '-0.6rem'
+          document.getElementById('content_div').style.marginTop = '-180px'
         } else {
-          document.getElementById('content_div').style.marginTop = '0rem'
+          document.getElementById('content_div').style.marginTop = '0px'
         }
       }
     }
