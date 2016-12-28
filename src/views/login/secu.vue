@@ -1,7 +1,7 @@
 <template>
   <div class="page-group">
     <div class="page page-current">
-      <section class="am-mask am-coss" id="content_div" style="height: 100%;">
+      <section class="am-mask am-coss" id="content_div">
         <header class="header">
           <div class="header_inner no_border">
             <a href="https://e.swsc.com.cn/m/mall/index.html#!/main/unifyMain.html" class="btn_cancel"></a>
@@ -37,7 +37,7 @@
         <div class="btn-page btn-page-center" style="padding-top: 0.3rem">
           <a @click="login" class="am-button am-button-red" am-mode="red">登录</a>
         </div>
-        <p class="links_box mt10">
+        <p class="links_box mt10" style="padding-bottom: 0.3rem">
           <a href="https://e.swsc.com.cn/m/mall/index.html#!/register/forgetPwd.html " style="font-size:0.14rem;"> 忘记密码？</a>
           <a href="https://e.swsc.com.cn/m/mall/index.html#!/register/register.html"  style="font-size:0.14rem;">手机快速注册</a>
         </p>
@@ -86,8 +86,22 @@
     },
     ready: function () {
       window.history.forward(1)
+      var that = this
+      window.addEventListener('resize', function () {
+        // 得到屏幕尺寸 (内部/外部宽度，内部/外部高度)
+        that.changeLogoPosition()
+      }, false)
     },
     methods: {
+      changeLogoPosition () {
+        var contentHeight = document.getElementById('content_div').clientHeight
+        contentHeight = parseInt(contentHeight)
+        if (document.body.scrollHeight - contentHeight <= 0) {
+          document.getElementById('content_div').style.marginTop = '-180px'
+        } else {
+          document.getElementById('content_div').style.marginTop = '0px'
+        }
+      }
     }
   }
 </script>
