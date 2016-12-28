@@ -1,7 +1,7 @@
 <template>
   <div class="page-group">
     <div class="page page-current">
-      <section class="am-mask am-coss" id="content_div" style="height: 100%;">
+      <section class="am-mask am-coss" id="content_div">
         <header class="header">
           <div class="header_inner no_border">
             <a href="https://e.swsc.com.cn/m/mall/index.html#!/main/unifyMain.html" class="btn_cancel"></a>
@@ -71,7 +71,6 @@
     data () {
       return {
         type: 'password',
-        contentHeight: 0,
         params: $P('200:1')
       }
     },
@@ -88,7 +87,6 @@
     ready: function () {
       window.history.forward(1)
       var that = this
-      that.contentHeight = document.body.clientHeight - 50
       window.addEventListener('resize', function () {
         // 得到屏幕尺寸 (内部/外部宽度，内部/外部高度)
         that.changeLogoPosition()
