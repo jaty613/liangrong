@@ -240,6 +240,11 @@
                   this.RealData = obj
                   // 卖出价
                   this.P3021.entrust_price = obj.buyPrice1
+                  // 国债没有涨跌停
+                  if (list[0]['code_type'] === '0x1103' || list[0]['code_type'] === '0x1203') {
+                    this.RealData.upPrice = '———'
+                    this.RealData.downPrice = '———'
+                  }
                 })
                 this.P1050['stock_code'] = val
                 this.AS1050()

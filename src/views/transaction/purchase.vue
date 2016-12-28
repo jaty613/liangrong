@@ -241,6 +241,11 @@
                   this.RealData = obj
                   // 买入价
                   this.P3020.entrust_price = obj.buyPrice1
+                  // 国债没有涨跌停
+                  if (list[0]['code_type'] === '0x1103' || list[0]['code_type'] === '0x1203') {
+                    this.RealData.upPrice = '———'
+                    this.RealData.downPrice = '———'
+                  }
                   // 设置要查询可买数量的股票代码、市场内别、买入价
                   this.P3010['stock_code'] = val
                   this.P3010['exchange_type'] = this.P3020.exchange_type

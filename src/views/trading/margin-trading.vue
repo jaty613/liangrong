@@ -236,6 +236,11 @@
                   this.RealData = obj
                   // 卖出价
                   this.P7040.entrust_price = obj.sellPrice1
+                  // 国债没有涨跌停
+                  if (list[0]['code_type'] === '0x1103' || list[0]['code_type'] === '0x1203') {
+                    this.RealData.upPrice = '———'
+                    this.RealData.downPrice = '———'
+                  }
                   // 设置要查询可卖数量的市场类别
                   this.P7030['stock_code'] = val
                   this.P7030['exchange_type'] = list[0]['exchange_type']
