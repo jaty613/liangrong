@@ -89,7 +89,7 @@
     },
     data () {
       return {
-        begin_date: (new Date(new Date().setMonth((new Date().getMonth() - 3))).Format('yyyy-MM-dd')),
+        begin_date: (new Date(new Date().setDate((new Date().getDate() - 7))).Format('yyyy-MM-dd')),
         end_date: ((new Date()).Format('yyyy-MM-dd')),
         reload: true,
         loading: true,
@@ -103,7 +103,7 @@
     },
     route: {
       data: function (transition) {
-        this.queryParams.begin_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setMonth((new Date().getMonth() - 3))).Format('yyyyMMdd'))
+        this.queryParams.begin_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setDate((new Date().getDate() - 7))).Format('yyyyMMdd'))
         this.queryParams.end_date = this.queryParams.end_date ? this.queryParams.end_date : ((new Date()).Format('yyyyMMdd'))
         this.RL28501()
         this.reload = true

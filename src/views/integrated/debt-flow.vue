@@ -1,13 +1,13 @@
 <template>
   <section class="pd-bottom46">
-    <mt-datetime-picker  :value="begin_date" :visible.sync="pickerStartVisible" type="date" year-format="{value} 年" month-format="{value} 月" date-format="{value} 日" @confirm="handleStartChange"></mt-datetime-picker>
+    <mt-datetime-picker  :value="start_date" :visible.sync="pickerStartVisible" type="date" year-format="{value} 年" month-format="{value} 月" date-format="{value} 日" @confirm="handleStartChange"></mt-datetime-picker>
     <mt-datetime-picker  :value="end_date" :visible.sync="pickerEndVisible" type="date" year-format="{value} 年" month-format="{value} 月" date-format="{value} 日" @confirm="handleEndChange"></mt-datetime-picker>
     <hgroup class="dealTop am-bg-writh weui_cells header-top">
       <div class="am-flexbox">
         <div class="am-flexbox-item">
           <p class="am-ft-gray am-pt-5 am-ft-smm"><span>起始时间</span></p>
           <p class="select" @click="this.pickerStartVisible=true">
-            {{begin_date}}
+            {{start_date}}
           </p>
         </div>
         <div class="">
@@ -73,6 +73,7 @@
     data () {
       return {
         begin_date: (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyy-MM-dd')),
+        start_date: (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyy-MM-dd')),
         end_date: ((new Date()).Format('yyyy-MM-dd')),
         reload: true,
         loading: true,
@@ -86,9 +87,9 @@
     },
     route: {
       data: function (transition) {
-        this.queryParams.begin_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyyMMdd'))
+        this.queryParams.begin_date = this.queryParams.start_date ? this.queryParams.start_date : (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyyMMdd'))
+        this.queryParams.start_date = this.queryParams.start_date ? this.queryParams.start_date : (new Date(new Date().setDate((new Date().getDate() - 30))).Format('yyyyMMdd'))
         this.queryParams.end_date = this.queryParams.end_date ? this.queryParams.end_date : ((new Date()).Format('yyyyMMdd'))
-
         this.RL7280()
         this.reload = true
       }
@@ -116,16 +117,17 @@
         }
       },
       handleStartChange (value) {
-        this.begin_date = value.Format('yyyy-MM-dd')
-        this.queryParams.begin_date = new Date(this.begin_date).Format('yyyyMMdd')
-        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+        this.start_date = value.Format('yyyy-MM-dd')
+        this.queryParams.start_date = new Date(this.start_date).Format('yyyyMMdd')
+        this.queryParams.begin_date = new Date(this.start_date).Format('yyyyMMdd')
+        if (VAA001({begin_date: this.start_date, end_date: this.end_date})) {
           this.search()
         }
       },
       handleEndChange (value) {
         this.end_date = value.Format('yyyy-MM-dd')
         this.queryParams.end_date = new Date(this.end_date).Format('yyyyMMdd')
-        if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
+        if (VAA001({begin_date: this.start_date, end_date: this.end_date})) {
           this.search()
         }
       }

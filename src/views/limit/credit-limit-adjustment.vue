@@ -51,7 +51,8 @@
                 date-format="{value} 日">
               </mt-datetime-picker>
               <span class="ui-form-field">
-                  <span v-on:click="this.pickerVisible=true" class="text_input "style="font-size:12px;">{{ params.valid_date ? params.valid_date : ((new Date()).Format('yyyy-MM-dd'))}}</span>
+                  <span v-on:click="this.pickerVisible=true" class="text_input "style="font-size:12px;">{{valid_date}}</span>
+                  <input type="hidden" v-model="params.valid_date" value="{{((new Date()).Format('yyyyMMdd'))}}"/>
               </span>
           </div>
         </div>
@@ -98,6 +99,7 @@
     },
     data () {
       return {
+        valid_date: ((new Date()).Format('yyyy-MM-dd')),
         defDate: ((new Date()).Format('yyyy-MM-dd')), // 缺省时间
         pickerVisible: false, // 时间选择框是否显示
         params: $P('28572:0')
@@ -114,7 +116,8 @@
     },
     methods: {
       _handleChange (value) { // 通过时间选择框,选择时间,并赋值到文本框
-        this.params.valid_date = value.Format('yyyy-MM-dd')
+        this.params.valid_date = value.Format('yyyyMMdd')
+        this.valid_date = value.Format('yyyy-MM-dd')
       }
     }
   }

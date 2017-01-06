@@ -72,28 +72,28 @@
         <ul class=" am-ft-smm border-bottom am-pb-5 sell-5 sell-8 am-relative">
           <li @click="this.P3021.entrust_price = this.RealData.sellPrice5" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">卖5</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice5 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.sellPrice5 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice5 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.sellPrice5, RealData.prevClosePrice)}}">
               {{RealData.sellPrice5 ? parseFloat(RealData.sellPrice5).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.sellCount5 ? Math.transScientific(parseFloat(RealData.sellCount5)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.sellPrice4" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">卖4</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice4 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.sellPrice4 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice4 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.sellPrice4, RealData.prevClosePrice)}}">
               {{RealData.sellPrice4 ? parseFloat(RealData.sellPrice4).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.sellCount4 ? Math.transScientific(parseFloat(RealData.sellCount4)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.sellPrice3" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">卖3</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice3 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.sellPrice3 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice3 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.sellPrice3, RealData.prevClosePrice)}}">
               {{RealData.sellPrice3 ? parseFloat(RealData.sellPrice3).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.sellCount3 ? Math.transScientific(parseFloat(RealData.sellCount3)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.sellPrice2" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">卖2</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice2 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.sellPrice2 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice2 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.sellPrice2, RealData.prevClosePrice)}}">
               {{RealData.sellPrice2 ? parseFloat(RealData.sellPrice2).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <!-- 手数上百万字体大小用-->
@@ -101,7 +101,7 @@
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.sellPrice1" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">卖1</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice1 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.sellPrice1 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.sellPrice1 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.sellPrice1, RealData.prevClosePrice)}}">
               {{RealData.sellPrice1 ? parseFloat(RealData.sellPrice1).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <!-- 手数上百万字体大小用-->
@@ -111,35 +111,35 @@
         <ul class="am-ft-smm am-mt-5 sell-5 sell-8">
           <li @click="this.P3021.entrust_price = this.RealData.buyPrice1" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">买1</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.buyCount1 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.buyPrice1 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.buyCount1 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.buyPrice1, RealData.prevClosePrice)}}">
               {{RealData.buyPrice1 ? parseFloat(RealData.buyPrice1).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.buyCount1 ? Math.transScientific(parseFloat(RealData.buyCount1)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.buyPrice2" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">买2</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.buyCount2 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.buyPrice2 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.buyCount2 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.buyPrice2, RealData.prevClosePrice)}}">
               {{RealData.buyPrice2 ? parseFloat(RealData.buyPrice2).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.buyCount2 ? Math.transScientific(parseFloat(RealData.buyCount2)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.buyPrice3" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">买3</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.buyCount3 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.buyPrice3 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.buyCount3 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.buyPrice3, RealData.prevClosePrice)}}">
               {{RealData.buyPrice3 ? parseFloat(RealData.buyPrice3).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.buyCount3 ? Math.transScientific(parseFloat(RealData.buyCount3)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.buyPrice4" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">买4</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.buyCount4 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.buyPrice4 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.buyCount4 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.buyPrice4, RealData.prevClosePrice)}}">
               {{RealData.buyPrice4 ? parseFloat(RealData.buyPrice4).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.buyCount4 ? Math.transScientific(parseFloat(RealData.buyCount4)) : '--'}}</p>
           </li>
           <li @click="this.P3021.entrust_price = this.RealData.buyPrice5" class="am-flexbox">
             <p class="am-ft-darkgray am-flexbox-item am-ft-center">买5</p>
-            <p class="am-flexbox-item am-ft-center {{RealData.buyCount5 >= 100 ? 'am-ft-smmm' : ''}} {{RealData.buyPrice5 > RealData.prevClosePrice? 'am-ft-red' : 'am-ft-green'}}">
+            <p class="am-flexbox-item am-ft-center {{RealData.buyCount5 >= 100 ? 'am-ft-smmm' : ''}} {{this.showColor(RealData.buyPrice5, RealData.prevClosePrice)}}">
               {{RealData.buyPrice5 ? parseFloat(RealData.buyPrice5).toFixed(RS1050.price_step ? (RS1050.price_step === '10' ? 2 : 3) : 2) : '--'}}
             </p>
             <p class="am-flexbox-item am-ft-right">{{RealData.buyCount5 ? Math.transScientific(parseFloat(RealData.buyCount5)) : '--'}}</p>
@@ -335,6 +335,15 @@
           }
         } else {
           this.reload = false
+        }
+      },
+      showColor (price, prevClosePrice) {
+        if (price > prevClosePrice) {
+          return 'am-ft-red'
+        } else if (price === prevClosePrice) {
+          return 'am-ft-gray'
+        } else {
+          return 'am-ft-green'
         }
       }
     }

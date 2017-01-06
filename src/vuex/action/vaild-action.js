@@ -58,7 +58,7 @@ export const VA3020 = (data = {}, confirm) => {
   </ul>
   ${parseFloat(data.entrust_price) < parseFloat(data.downPrice) ? '<div class="am-ft-sm">(委托价格低于跌停价,交易可能失败!)</div>' : ''}
   ${parseFloat(data.entrust_price) > parseFloat(data.upPrice) ? '<div class="am-ft-sm">(委托价格高于涨停价,交易可能失败!)</div>' : ''}
- 
+
 `
   return template
 }
@@ -577,6 +577,10 @@ export const VAA001 = (data) => {
     }
     if (new Date(data.begin_date).getTime() > new Date(data.end_date).getTime()) {
       Toast({message: '开始时间不能大于结束时间', duration: 1000})
+      return false
+    }
+    if (new Date(data.end_date).getTime() - new Date(data.begin_date).getTime() > (30 * 24 * 60 * 60 * 1000)) {
+      Toast({message: '时间间隔不能大于一个月', duration: 1000})
       return false
     }
     return true

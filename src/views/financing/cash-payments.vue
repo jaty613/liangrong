@@ -68,13 +68,13 @@
               <p class="am-ft-11 am-ft-smm ">{{item.stock_code}}</p>
             </div>
             <div class="am-flexbox-item">
-              <p class="am-ft-11 am-ft-smm">{{Math.transCNScientific(parseFloat(item.real_compact_balance))}}</p>
+              <p class="am-ft-11 am-ft-smm">{{Math.transScientificNum(parseFloat(item.real_compact_balance))}}</p>
             </div>
             <div class="am-flexbox-item">
-              <p class="am-ft-15 am-ft-smm">{{Math.transCNScientific(parseFloat(item.real_compact_interest))}}</p>
+              <p class="am-ft-15 am-ft-smm">{{Math.transScientificNum(parseFloat(item.real_compact_interest))}}</p>
             </div>
             <div class="am-flexbox-item">
-              <p class="am-ft-15 am-ft-smm">{{Math.transCNScientific(parseFloat(item.real_compact_fare))}}</p>
+              <p class="am-ft-15 am-ft-smm">{{Math.transScientificNum(parseFloat(item.real_compact_fare))}}</p>
             </div>
           </li>
         </template>

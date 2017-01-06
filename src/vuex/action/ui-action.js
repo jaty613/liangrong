@@ -300,7 +300,8 @@ ActionStore['712:0:submit'] = ({dispatch}, vm) => {
         // $P('711:0')['stock_account'] = $P('712:0')['stock_account']
         $P('711:0')['stock_code'] = $P('712:0')['stock_code']
         $P('711:0')['occur_amount'] = $P('712:0')['occur_amount']
-        $P('711:0')['valid_date'] = (new Date(new Date().setDate((new Date().getDate() + 2))).Format('yyyyMMdd'))
+        // $P('711:0')['valid_date'] = (new Date(new Date().setDate((new Date().getDate() + 2))).Format('yyyyMMdd'))
+        $P('711:0')['valid_date'] = (new Date().Format('yyyyMMdd'))
         // 担保证券冻结
         $Visual(dispatch, '711:0:1:1').then((msg) => {
           if (msg) {

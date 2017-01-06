@@ -53,7 +53,23 @@ window.Math.transCNScientific = function (val) {
   }
   return _val
 }
-
+// // 数据值转简单表示中文方式  亿、万等 保留num为小数
+window.Math.transScientificNum = function (val, num) {
+  var _val = '0'
+  if (!num || typeof num !== 'number') {
+    num = 2
+  }
+  if (typeof val === 'number') {
+    if (val >= 10000000 || val <= -10000000) {
+      _val = `${parseFloat(val / 100000000).toFixed(num)}亿`
+    } else if (val >= 10000 || val <= -10000) {
+      _val = `${parseFloat(val / 10000).toFixed(num)}万`
+    } else {
+      _val = `${parseFloat(val).toFixed(num)}`
+    }
+  }
+  return _val
+}
 // 对Date的扩展，将 Date 转化为指定格式的String
 // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
 // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)
