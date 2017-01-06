@@ -142,8 +142,6 @@
 
           this.RS4070.map((account) => { // 信用账户
             if (account['exchange_type'] === val) {
-              this.P7121['stock_account'] = account['stock_account']
-              this.P7121['seat_no'] = account['seat_no']
               // 信用账户
               this.P7121.stock_account_crdt = account.stock_account
               this.P7121.seat_no_crdt = account.seat_no

@@ -120,35 +120,25 @@
           this.P7120['stock_account'] = ''
           this.P7120['seat_no'] = ''
         } else {
-          this.RS4071.map((account) => {
+          this.RS4071.map((account) => { // 普通账户
             if (account['exchange_type'] === val) {
+              $P('711:0')['stock_account'] = account['stock_account'] // 冻结账户
+
               this.P7120['stock_account'] = account['stock_account']
               this.P7120['seat_no'] = account['seat_no']
-            } else {
-              this.RS4071.map((account) => { // 普通账户
-                if (account['exchange_type'] === val) {
-                  $P('711:0')['stock_account'] = account['stock_account'] // 冻结账户
-
-                  this.P7120['stock_account'] = account['stock_account']
-                  this.P7120['seat_no'] = account['seat_no']
-                  // 普通账号
-                  this.P7120.stock_account_comm = account.stock_account
-                  this.P7120.seat_no_comm = account.seat_no
-                  // 对方账户
-                  this.P7120.stock_account_df = account.stock_account
-                  this.P7120.seat_no_df = account.seat_no
-                }
-              })
-
-              this.RS4070.map((account) => { // 信用账户
-                if (account['exchange_type'] === val) {
-                  this.P7120['stock_account'] = account['stock_account']
-                  this.P7120['seat_no'] = account['seat_no']
-                  // 信用账户
-                  this.P7120.stock_account_crdt = account.stock_account
-                  this.P7120.seat_no_crdt = account.seat_no
-                }
-              })
+              // 普通账号
+              this.P7120.stock_account_comm = account.stock_account
+              this.P7120.seat_no_comm = account.seat_no
+              // 对方账户
+              this.P7120.stock_account_df = account.stock_account
+              this.P7120.seat_no_df = account.seat_no
+            }
+          })
+          this.RS4070.map((account) => { // 信用账户
+            if (account['exchange_type'] === val) {
+              // 信用账户
+              this.P7120.stock_account_crdt = account.stock_account
+              this.P7120.seat_no_crdt = account.seat_no
             }
           })
         }

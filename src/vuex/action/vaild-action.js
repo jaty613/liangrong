@@ -440,6 +440,7 @@ export const VA7080 = (data) => {
 
 // 担保品 - 提交
 export const VA7120 = (data) => {
+  console.log(data)
   if (data.stock_code === '') {
     Toast({message: '股票代码不能为空', duration: 1000})
     return false
@@ -468,7 +469,7 @@ export const VA7120 = (data) => {
     </li>
     <li class="am-flexbox am-ft-sm am-pt-5">
       <p class="">信用股东账号：</p>
-      <p class="am-flexbox-item">${data.stock_account}</p>
+      <p class="am-flexbox-item">${data.stock_account_crdt}</p>
     </li>
     <li class="am-flexbox am-ft-sm am-pt-5">
       <p class="">普通资金账号：</p>
@@ -520,7 +521,7 @@ export const VA7121 = (data) => {
     </li>
     <li class="am-flexbox am-ft-sm am-pt-5">
       <p class="">信用股东账号：</p>
-      <p class="am-flexbox-item">${data.stock_account}</p>
+      <p class="am-flexbox-item">${data.stock_account_crdt}</p>
     </li>
     <li class="am-flexbox am-ft-sm am-pt-5">
       <p class="">普通资金账号：</p>
