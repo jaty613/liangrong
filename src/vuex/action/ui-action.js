@@ -519,8 +519,9 @@ ActionStore['704:0'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('704:0').batch_no}`, duration: 1000})
+            $P('704:0')['stock_code'] = ''
             $Visual(dispatch, '716:1:0:4', 'RELOAD')
-            $Visual(dispatch, '703:0:1:4', 'RELOAD')
+            // $Visual(dispatch, '703:0:1:4', 'RELOAD')
           }
         })
       }
@@ -549,7 +550,7 @@ ActionStore['722:0:SEARCH'] = ({dispatch}, vm) => {
   })
 }
 
-// 卖券还券 - 委托确认
+// 买券还券 - 委托确认
 ActionStore['704:1'] = ({dispatch}, vm) => {
   let template = VaildStore.VA7041(Object.assign({upPrice: vm.RealData.upPrice, downPrice: vm.RealData.downPrice}, $P('704:1')))
   if (template) {
@@ -561,8 +562,9 @@ ActionStore['704:1'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('704:1').batch_no}`, duration: 1000})
+            $P('704:1')['stock_code'] = ''
             $Visual(dispatch, '722:0:0:4', 'RELOAD')
-            $Visual(dispatch, '702:0:1:4', 'RELOAD')
+            // $Visual(dispatch, '702:0:1:4', 'RELOAD')
           }
         })
       }
@@ -610,8 +612,9 @@ ActionStore['708:0'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('708:0').entrust_no}`, duration: 1000})
+            $P('708:0')['stock_code'] = ''
             $Visual(dispatch, '722:0:0:4', 'RELOAD')
-            $Visual(dispatch, '702:0:1:4', 'RELOAD')
+            // $Visual(dispatch, '702:0:1:4', 'RELOAD')
           }
         })
       }
@@ -631,6 +634,7 @@ ActionStore['704:2'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('704:2').batch_no}`, duration: 1000})
+            $P('704:2')['stock_code'] = ''
             $Visual(dispatch, '403:0:0:4')
           }
         })
@@ -665,8 +669,9 @@ ActionStore['704:3'] = ({dispatch}, vm) => {
           if (msg) Toast({message: msg.message, duration: 1000})
           else {
             Toast({message: `委托成功! 委托编号: ${$G('704:3').batch_no}`, duration: 1000})
+            $P('704:3')['stock_code'] = ''
             $Visual(dispatch, '403:0:0:4')
-            $Visual(dispatch, '700:0:1:4')
+            // $Visual(dispatch, '700:0:1:4')
           }
         })
       }
