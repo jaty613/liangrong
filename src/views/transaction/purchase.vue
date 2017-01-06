@@ -268,6 +268,7 @@
           this.P3020['stock_name'] = ''
           this.P3020['entrust_price'] = ''
           this.P3020['entrust_amount'] = ''
+          this.P3020['entrust_prop'] = '0'
           // 重置要查询可买数量的股票代码
           this.P3010['stock_code'] = ''
         }

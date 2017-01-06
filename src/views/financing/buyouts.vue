@@ -195,7 +195,7 @@
           </div>
           <div class="am-flexbox-item">
             <p class="am-ft-11 am-ft-sm">{{item.last_price}}</p>
-            <p class="am-ft-15 am-ft-smm">{{Math.transCNScientific(parseFloat(item.market_value))}}</p>
+            <p class="am-ft-15 am-ft-smm">{{Math.transScientificNum(parseFloat(item.market_value))}}</p>
           </div>
         </li>
       </ul>

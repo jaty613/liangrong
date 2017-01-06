@@ -279,7 +279,15 @@
           this.AS3000()
         }
       })
-
+      // 监听根据股票价格查询 - 可卖数量
+      this.$watch('P3021.entrust_price', function (val, oldVal) {
+        this.P3000.entrust_price = val
+        if (val === '') {
+          this.AS3000RESET()
+        } else {
+          this.AS3000()
+        }
+      })
       // 监听列表内容是否发生变化
       this.$watch('RS4030.length', function (val, oldVal) {
         this.loading = false

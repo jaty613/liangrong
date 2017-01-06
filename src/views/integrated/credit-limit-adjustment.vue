@@ -104,6 +104,7 @@
     route: {
       data: function (transition) {
         this.queryParams.begin_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setMonth((new Date().getMonth() - 1))).Format('yyyyMMdd'))
+        this.queryParams.start_date = this.queryParams.begin_date ? this.queryParams.begin_date : (new Date(new Date().setMonth((new Date().getMonth() - 1))).Format('yyyyMMdd'))
         this.queryParams.end_date = this.queryParams.end_date ? this.queryParams.end_date : ((new Date()).Format('yyyyMMdd'))
 
         this.RL7240()
@@ -135,6 +136,7 @@
       handleStartChange (value) {
         this.begin_date = value.Format('yyyy-MM-dd')
         this.queryParams.begin_date = new Date(this.begin_date).Format('yyyyMMdd')
+        this.queryParams.start_date = new Date(this.begin_date).Format('yyyyMMdd')
         if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
           this.search()
         }
@@ -142,6 +144,7 @@
       handleEndChange (value) {
         this.end_date = value.Format('yyyy-MM-dd')
         this.queryParams.end_date = new Date(this.end_date).Format('yyyyMMdd')
+        this.queryParams.start_date = new Date(this.begin_date).Format('yyyyMMdd')
         if (VAA001({begin_date: this.begin_date, end_date: this.end_date})) {
           this.search()
         }

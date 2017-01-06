@@ -276,6 +276,15 @@
           this.AS7030()
         }
       })
+      // 监听根据股票价格查询 - 可卖数量
+      this.$watch('P7040.entrust_price', function (val, oldVal) {
+        this.P7030.entrust_price = val
+        if (val === '') {
+          this.AS7030RESET()
+        } else {
+          this.AS7030()
+        }
+      })
 
       // 监听文本输入框委托数量 - 更改 全仓、2/1 等标示
       this.$watch('P7040.entrust_amount', function (val, oldVal) {
